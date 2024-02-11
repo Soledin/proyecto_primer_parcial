@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto1</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+</head>
+<body>
+
+    <table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apaterno</th>
+                <th>Amaterno</th>
+                <th>Residencia</th>
+                <th>Edad</th>
+                <th>Email</th>
+                <th>Rango</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Juan</td>
+                <td>Gomez</td>
+                <td>Saldaña</td>
+                <td>Linares</td>
+                <td>30 años</td>
+                <td>Juan@gmail.com</td>
+                <td>Usuario</td>
+            </tr>
+            <tr>
+                <td>Geraldine</td>
+                <td>Abundiz</td>
+                <td>De La Rosa</td>
+                <td>Galeana</td>
+                <td>20 años</td>
+                <td>Sol@utl.edu.mx</td>
+                <td>Admin</td>
+            </tr>
+            <tr>
+                <td>Danae</td>
+                <td>Solano</td>
+                <td>Jasso</td>
+                <td>Monterrey</td>
+                <td>19 años</td>
+                <td>Dan@gmail.com</td>
+                <td>Usuario</td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+
+    <script>
+        $(document).ready(function () {
+            $('#example').DataTable();
+        });
+    </script>
+
+</body>
+</html>

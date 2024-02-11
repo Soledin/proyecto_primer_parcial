@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+<!-- Inclusión de DataTables -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Autor</th>
+                <th>Año</th>
+                <th>NumeroPaginas</th>
+                <th>ISBN</th>
+                <th>Capitulos</th>
+                
+            </tr>
+        </thead>
+    </table>
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable({
+                "ajax": "tabla.php",
+                "columns": [
+                    { "data": "Nombre" },
+                    { "data": "Autor" },
+                    { "data": "Año" },
+                    { "data": "NumeroPaginas" },
+                    { "data": "ISBN" },
+                    { "data": 'Capitulos', render:function(data){
+                        var Capitulos="";
+                        $.each(data,function(Capitulo1,PaginasCap1){
+                            Capitulos += Capitulo1 +":" +PaginasCap1 + "<br>";
+
+                        });
+                        return Capitulos; 
+                    }  }
+                    
+                   
+                ]
+            });
+        });
+        </script> 
+</body>
+</html>
